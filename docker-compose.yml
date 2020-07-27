@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nuxt:
+    build: ./docker/nuxt
+    command: >
+      yarn run dev
+    environment: 
+      HOST: 0.0.0.0
+    volumes:
+      - ./src:/nuxt
+    ports:
+      - "3000:3000"
